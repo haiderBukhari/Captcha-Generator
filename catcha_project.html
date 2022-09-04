@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+        }
+
+        div label{
+            font-size: 40px;
+        }
+
+        #Man{
+            margin-top: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            
+        }
+
+        #Man:hover{
+            background-color: blueviolet;
+            color: white;
+            cursor: pointer;
+            transition:ease-out 0.2s;
+            border-radius: 10px;
+            font-size: larger;
+        }
+
+        #Container{
+            padding-top: 180px;
+        }
+        #Generate{
+            size: 100px;
+            max-width: 190px;
+            max-height: 70px;
+            font-size: 30px;
+            text-align: center;
+            color: blue;
+        }
+        #Generate:hover{
+            background-color: bisque;
+            color: black;
+            transition: ease-out 0.2s;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #valid{
+            size: 100px;
+            max-width: 190px;
+            max-height: 70px;
+            font-size: 30px;
+            text-align: center;
+            color: blue;
+        }
+        #valid:hover{
+            background-color: bisque;
+            color: black;
+            transition: ease-out 0.2s;
+            border-radius: 10px;
+    
+        }
+    </style>
+    <script src="Captcha.js"></script>
+</head>
+
+<body onload="Captcha_Generator();">
+    <div id="Container">
+        <div>
+           <center> <label for="Generate" onclick="Captcha_Generator()" id="cap">Generate Captcha</label></center><br>
+           <center><input type="text" name="" id="Generate" disabled><br></center>
+        </div><br>
+        <div>
+            <center>  <label for="Valid" onclick="Captcha_Generator()">Enter Captcha</label><br></center>
+                <center><input type="text" name="" id="valid"></center>
+        </div>
+        <div>
+            <center>  <button onclick="check_it()" id="Man">Submit</button></center>
+        </div>
+    </div>
+
+</body>
+
+</html>
